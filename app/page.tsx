@@ -445,7 +445,7 @@ export default function LoveMessagePage() {
       style={{
         minHeight: "100dvh",
         background: "linear-gradient(135deg, #ffe0ec 0%, #e0e7ff 100%)",
-        fontFamily: "Inter, system-ui, sans-serif",
+        fontFamily: "Nunito, system-ui, sans-serif",
       }}
     >
       {/* Top bar for heart counter and sound button - smaller size */}
@@ -470,8 +470,8 @@ export default function LoveMessagePage() {
       {showStartOverlay && (
         <div className="fixed inset-0 z-[100] bg-gradient-to-br from-pink-200 via-purple-100 to-blue-200 flex flex-col items-center justify-center">
           <div className="flex flex-col align-center justify-center text-3xl px-10 font-bold text-pink-600 mb-8 animate-bounce">
-            <span style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Chào mừng đến với</span>
-            <span style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>thế giới yêu thương!</span>
+            <span style={{ fontFamily: 'Nunito, system-ui, sans-serif' }}>Chào mừng đến với</span>
+            <span style={{ fontFamily: 'Nunito, system-ui, sans-serif' }}>thế giới yêu thương!</span>
           </div>
           <div className="mb-6 flex justify-center">
             <Image
@@ -875,7 +875,7 @@ export default function LoveMessagePage() {
                   ? "animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500"
                   : ""
               } ${loveVirus ? "animate-bounce" : ""}`}
-              style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+              style={{ fontFamily: 'Nunito, system-ui, sans-serif' }}
             >
               Dành cho Nhật Vy 💕✨
             </h1>
@@ -901,7 +901,7 @@ export default function LoveMessagePage() {
                   ? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500"
                   : ""
               }`}
-            style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+            style={{ fontFamily: 'Nunito, system-ui, sans-serif' }}
             >
               {isTyping ? typingText : encouragingMessages[currentMessage]}
               {isTyping && <span className="animate-pulse">|</span>}
@@ -965,14 +965,14 @@ export default function LoveMessagePage() {
             >
               <Zap className="w-7 h-7 fill-white animate-spin-slow" />
               <span className="tracking-wide drop-shadow-lg animate-pulse">
-                <span style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>MEGA YÊU THƯƠNG!</span>
+                <span style={{ fontFamily: 'Nunito, system-ui, sans-serif' }}>MEGA YÊU THƯƠNG!</span>
               </span>
               <Gift className="w-7 h-7 animate-bounce" />
             </Button>
             <div className="w-full flex justify-center mt-6">
               <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-base text-gray-500 font-semibold">
                 <span>💕 {heartCount} lần yêu thương</span>
-                {/* <span style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>✨ {Math.floor(heartCount / 5)} phép màu</span> */}
+                {/* <span style={{ fontFamily: 'Nunito, system-ui, sans-serif' }}>✨ {Math.floor(heartCount / 5)} phép màu</span> */}
               </div>
             </div>
           </div>
@@ -986,7 +986,7 @@ export default function LoveMessagePage() {
                 ? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500"
                 : ""
             } ${loveVirus ? "animate-bounce" : ""}`}
-            style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+            style={{ fontFamily: 'Nunito, system-ui, sans-serif' }}
           >
             &quot;Anh sẽ luôn là siêu anh hùng của em&quot; 🧛✨
           </p>
