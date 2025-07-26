@@ -358,7 +358,7 @@ export default function LoveMessagePage() {
   }
 
   const createConstellation = () => {
-    const starPattern = []
+    const starPattern: Array<{ id: number; x: number; y: number; delay: number; connected: boolean }> = []
     const positions = [
       { x: 20, y: 20 },
       { x: 80, y: 30 },
