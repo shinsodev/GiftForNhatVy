@@ -29,41 +29,26 @@ export default function LoveMessagePage() {
   const [typingText, setTypingText] = useState("")
   const [isTyping, setIsTyping] = useState(false) // Chỉ bắt đầu khi nhấn nút
   const [heartCount, setHeartCount] = useState(0)
-  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; color: string }>>([])
+  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; color: string }>>([] as Array<{ id: number; x: number; y: number; color: string }>)
   const [musicPlaying, setMusicPlaying] = useState(false)
   const [rainbowMode, setRainbowMode] = useState(false)
   const [currentBg, setCurrentBg] = useState(0)
-  const [isChanging, setIsChanging] = useState(false)
   const [isButtonPressed, setIsButtonPressed] = useState(false)
   const [loveVirus, setLoveVirus] = useState(false)
-  const [virusHearts, setVirusHearts] = useState<
-    Array<{ id: number; x: number; y: number; size: number; delay: number }>
-  >([])
+  const [virusHearts, setVirusHearts] = useState<Array<{ id: number; x: number; y: number; size: number; delay: number }>>([] as Array<{ id: number; x: number; y: number; size: number; delay: number }>)
   const [screenGlitch, setScreenGlitch] = useState(false)
   const [effectIndex, setEffectIndex] = useState(0)
-  const [spiralHearts, setSpiralHearts] = useState<Array<{ id: number; angle: number; radius: number; delay: number }>>(
-    [],
-  )
-  const [rainHearts, setRainHearts] = useState<Array<{ id: number; x: number; delay: number }>>([])
-  const [fireworkHearts, setFireworkHearts] = useState<
-    Array<{ id: number; x: number; y: number; vx: number; vy: number; delay: number }>
-  >([])
+  const [spiralHearts, setSpiralHearts] = useState<Array<{ id: number; angle: number; radius: number; delay: number }>>([] as Array<{ id: number; angle: number; radius: number; delay: number }>)
+  const [rainHearts, setRainHearts] = useState<Array<{ id: number; x: number; delay: number }>>([] as Array<{ id: number; x: number; delay: number }>)
+  const [fireworkHearts, setFireworkHearts] = useState<Array<{ id: number; x: number; y: number; vx: number; vy: number; delay: number }>>([] as Array<{ id: number; x: number; y: number; vx: number; vy: number; delay: number }>)
   const [portalEffect, setPortalEffect] = useState(false)
   const [gravityWave, setGravityWave] = useState(false)
-
-  // New effects
-  const [matrixRain, setMatrixRain] = useState<Array<{ id: number; x: number; speed: number; delay: number }>>([])
-  const [dnaHelix, setDnaHelix] = useState<Array<{ id: number; angle: number; height: number; delay: number }>>([])
-  const [quantumTunnel, setQuantumTunnel] = useState<
-    Array<{ id: number; distance: number; angle: number; delay: number }>
-  >([])
-  const [blackHole, setBlackHole] = useState<Array<{ id: number; angle: number; radius: number; delay: number }>>([])
-  const [constellation, setConstellation] = useState<
-    Array<{ id: number; x: number; y: number; delay: number; connected: boolean }>
-  >([])
-
+  const [matrixRain, setMatrixRain] = useState<Array<{ id: number; x: number; speed: number; delay: number }>>([] as Array<{ id: number; x: number; speed: number; delay: number }>)
+  const [dnaHelix, setDnaHelix] = useState<Array<{ id: number; angle: number; height: number; delay: number }>>([] as Array<{ id: number; angle: number; height: number; delay: number }>)
+  const [quantumTunnel, setQuantumTunnel] = useState<Array<{ id: number; distance: number; angle: number; delay: number }>>([] as Array<{ id: number; distance: number; angle: number; delay: number }>)
+  const [blackHole, setBlackHole] = useState<Array<{ id: number; angle: number; radius: number; delay: number }>>([] as Array<{ id: number; angle: number; radius: number; delay: number }>)
+  const [constellation, setConstellation] = useState<Array<{ id: number; x: number; y: number; delay: number; connected: boolean }>>([] as Array<{ id: number; x: number; y: number; delay: number; connected: boolean }>)
   const audioRef = useRef<HTMLAudioElement | null>(null)
-  const canvasRef = useRef<HTMLCanvasElement | null>(null)
 
   // Phát nhạc tự động khi vào trang nếu musicPlaying là true
   useEffect(() => {
@@ -115,7 +100,7 @@ export default function LoveMessagePage() {
       }, 80) // Slower typing speed
       return () => clearInterval(typing)
     }
-  }, [currentMessage, isTyping])
+  }, [currentMessage, isTyping, backgrounds.length])
 
   // Particle animation
   useEffect(() => {
@@ -999,7 +984,7 @@ export default function LoveMessagePage() {
                 : ""
             } ${loveVirus ? "animate-bounce" : ""}`}
           >
-            "Anh sẽ luôn là siêu anh hùng của em" 🧛✨
+            &quot;Anh sẽ luôn là siêu anh hùng của em&quot; 🧛✨
           </p>
         </div>
       </Card>
